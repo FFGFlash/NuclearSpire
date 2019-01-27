@@ -27,7 +27,7 @@ public class CrystalShield extends CustomCard {
 	public CrystalShield() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
 				CardTarget.SELF);
-		this.block = this.baseBlock = BLOCK;
+		block = baseBlock = BLOCK;
 	}
 
 	@Override

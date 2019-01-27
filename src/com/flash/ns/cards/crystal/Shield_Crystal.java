@@ -27,7 +27,7 @@ public class Shield_Crystal extends CustomCard {
 	public Shield_Crystal() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
 				CardTarget.SELF);
-		this.block = this.baseBlock = BLOCK;
+		block = baseBlock = BLOCK;
 	}
 
 	@Override

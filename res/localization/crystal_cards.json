@@ -10,5 +10,9 @@
   "Shield_Crystal": {
     "NAME": "Shield",
     "DESCRIPTION": "Gain !B! block."
+  },
+  "Crystal_Shards": {
+    "NAME": "Crystal Shards",
+    "DESCRIPTION": "Deal !D! damage, X times."
   }
 }
