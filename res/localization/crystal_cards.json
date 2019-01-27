@@ -1,0 +1,14 @@
+{
+  "Revolver_Crystal": {
+    "NAME": "Revolver",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Crystal_Shield": {
+    "NAME": "Crystal Shield",
+    "DESCRIPTION": "Gain !B! block."
+  },
+  "Shield_Crystal": {
+    "NAME": "Shield",
+    "DESCRIPTION": "Gain !B! block."
+  }
+}

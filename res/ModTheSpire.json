@@ -1,0 +1,10 @@
+{
+  "modid": "nuclear",
+  "name": "Nuclear Spire",
+  "author_list": ["FFGFlash"],
+  "description": "Nuclear Throne meets Slay The Spire!",
+  "version": "0.0.1",
+  "sts_version": "01-23-2019",
+  "mts_version": "3.8.2",
+  "dependencies": ["basemod"]
+}
