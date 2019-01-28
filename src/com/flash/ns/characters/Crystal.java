@@ -40,18 +40,22 @@ public class Crystal extends CustomPlayer {
 	public ArrayList<String> getStartingDeck() {
 		ArrayList<String> retVal = new ArrayList<>();
 		
+		// 'Strikes'
 		retVal.add("Revolver_Crystal");
 		retVal.add("Revolver_Crystal");
 		retVal.add("Revolver_Crystal");
 		retVal.add("Revolver_Crystal");
 		retVal.add("Revolver_Crystal");
-
-		retVal.add("Crystal_Shield");
 		
+		// 'Defends'
 		retVal.add("Shield_Crystal");
 		retVal.add("Shield_Crystal");
 		retVal.add("Shield_Crystal");
 		retVal.add("Shield_Crystal");
+		retVal.add("Shield_Crystal");
+		
+		// Other starter card(s)
+		retVal.add("Crystal_Shield");
 		
 		return retVal;
 	}

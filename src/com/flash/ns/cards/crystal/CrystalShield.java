@@ -11,6 +11,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 
+/* TO DO
+ * 
+ * Crystal shield blocks for half the incoming amount of damage,
+ * Giving thorns equal to that amount.
+ * 
+ */
+
 public class CrystalShield extends CustomCard {
 	public static final String ID = "Crystal_Shield";
 
