@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.BaseMod;
@@ -23,13 +24,14 @@ import basemod.interfaces.PostDrawSubscriber;
 import basemod.interfaces.PostDungeonInitializeSubscriber;
 import basemod.interfaces.PostExhaustSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import basemod.interfaces.PreMonsterTurnSubscriber;
 import basemod.interfaces.SetUnlocksSubscriber;
 
 @SpireInitializer
 public class NuclearSpireMod implements PostInitializeSubscriber, EditCardsSubscriber, EditRelicsSubscriber,
 		EditCharactersSubscriber, EditStringsSubscriber, SetUnlocksSubscriber, OnCardUseSubscriber,
 		EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostExhaustSubscriber, PostBattleSubscriber,
-		PostDungeonInitializeSubscriber, PostDrawSubscriber {
+		PostDungeonInitializeSubscriber, PostDrawSubscriber, PreMonsterTurnSubscriber {
 
 	public static final Logger logger = LogManager.getLogger(NuclearSpireMod.class.getName());
 	private List<CharacterMod> mods;
@@ -153,5 +155,15 @@ public class NuclearSpireMod implements PostInitializeSubscriber, EditCardsSubsc
 
 	@Override
 	public void receiveSetUnlocks() {
+	}
+
+	@Override
+	public boolean receivePreMonsterTurn(AbstractMonster m) {
+		
+		for (PreMonsterTurnSubscriber mod : mods) {
+			mod.receivePreMonsterTurn(m);
+		}
+		
+		return false;
 	}
 }
