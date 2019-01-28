@@ -38,7 +38,6 @@ public class NuclearSpireMod implements PostInitializeSubscriber, EditCardsSubsc
 		BaseMod.subscribe(this);
 
 		mods = new ArrayList<>();
-		mods.add(new StripperMod());
 		mods.add(new CrystalMod());
 	}
 

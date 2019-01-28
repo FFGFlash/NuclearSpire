@@ -1,11 +1,9 @@
 package com.flash.ns.cards.crystal;
 
 import com.flash.ns.patches.AbstractCardEnum;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -20,14 +18,11 @@ public class CrystalShield extends CustomCard {
 
 	public static final String IMG_PATH = "images/cards/placeholder.png";
 
-	public static final int COST = 1;
-	public static final int UPGRADE_PLUS_BLOCK = 10;
-	public static final int BLOCK = 10;
+	public static final int COST = 2;
 
 	public CrystalShield() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
 				CardTarget.SELF);
-		block = baseBlock = BLOCK;
 	}
 
 	@Override
@@ -39,12 +34,12 @@ public class CrystalShield extends CustomCard {
 	public void upgrade() {
 		if (!upgraded) {
 			upgradeName();
-			upgradeBlock(UPGRADE_PLUS_BLOCK);
+			updateCost(1);
 		}
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+		
 	}
 }
