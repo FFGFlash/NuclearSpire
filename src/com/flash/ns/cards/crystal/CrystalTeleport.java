@@ -11,8 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 
-public class CrystalShield extends CustomCard {
-	public static final String ID = "Crystal_Shield";
+public class CrystalTeleport extends CustomCard {
+
+	public static final String ID = "Crystal_Teleport";
 
 	private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
@@ -21,18 +22,20 @@ public class CrystalShield extends CustomCard {
 	public static final String IMG_PATH = "images/cards/placeholder.png";
 
 	public static final int COST = 1;
-	public static final int UPGRADE_PLUS_BLOCK = 10;
-	public static final int BLOCK = 10;
-
-	public CrystalShield() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
+	public static final int UPGRADE_MODIFY_STRENGTH = 1;
+	public static final int UPGRADE_MODIFY_DEXTERITY = -1;
+	public static final int STRENGTH = 2;
+	public static final int DEXTERITY = 1;
+	
+	public CrystalTeleport() {
+		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
 				CardTarget.SELF);
-		block = baseBlock = BLOCK;
+		magicNumber = baseMagicNumber = STRENGTH;
 	}
 
 	@Override
 	public AbstractCard makeCopy() {
-		return new CrystalShield();
+		return new CrystalTeleport();
 	}
 
 	@Override
@@ -47,4 +50,5 @@ public class CrystalShield extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
 	}
+
 }
