@@ -10,6 +10,7 @@ Impact Wrists (2 energy)
 POWER
 - On enemy death, hurt all other enemies for 10/14 damage.
 
+[ COMPLETED ]
 Scarier face (2 energy)
 SKILL
 - ()/(Innate.) All enemies lose 20% HP. Exhaust.
