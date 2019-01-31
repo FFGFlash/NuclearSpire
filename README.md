@@ -1,11 +1,11 @@
 
 # Nuclear Spire
 
----
+A mod for Slay the Spire.
 
 # Planned Cards
 
-```ini
+```
 Impact Wrists (2 energy)
 POWER
 - On enemy death, hurt all other enemies for 10/14 damage.
