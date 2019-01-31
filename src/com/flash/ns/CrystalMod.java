@@ -7,11 +7,11 @@ import org.apache.logging.log4j.Logger;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.flash.ns.cards.crystal.CrystalShards;
-import com.flash.ns.cards.crystal.CrystalShield;
-import com.flash.ns.cards.crystal.Revolver_Crystal;
-import com.flash.ns.cards.crystal.Shield_Crystal;
 import com.flash.ns.characters.Crystal;
+import com.flash.ns.characters.crystal.cards.CrystalShards;
+import com.flash.ns.characters.crystal.cards.CrystalShield;
+import com.flash.ns.characters.crystal.cards.Revolver_Crystal;
+import com.flash.ns.characters.crystal.cards.Shield_Crystal;
 import com.flash.ns.patches.AbstractCardEnum;
 import com.flash.ns.patches.PlayerClassEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;

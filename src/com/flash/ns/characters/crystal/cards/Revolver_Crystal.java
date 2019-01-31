@@ -1,14 +1,15 @@
-package com.flash.ns.cards.crystal;
+package com.flash.ns.characters.crystal.cards;
 
 import com.flash.ns.patches.AbstractCardEnum;
-import com.megacrit.cardcrawl.actions.unique.WhirlwindAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import basemod.abstracts.CustomCard;
 
@@ -18,11 +19,11 @@ import basemod.abstracts.CustomCard;
  * @version 0.0.1
  *
  */
-public class CrystalShards extends CustomCard {
+public class Revolver_Crystal extends CustomCard {
 	/**
 	 * The card ID.
 	 */
-	public static final String ID = "Crystal_Shards";
+	public static final String ID = "Revolver_Crystal";
 
 	/**
 	 * The card's CardString.
@@ -48,19 +49,18 @@ public class CrystalShards extends CustomCard {
 	 * The amount of energy the card will use.<br>
 	 * If the value is negative one then it'll consume as much energy as possible.
 	 */
-	public static final int COST = -1;
+	public static final int COST = 1;
 
 	public static final int UPGRADE_PLUS_DMG = 3;
-	public static final int ATTACK_DMG = 5;
+	public static final int ATTACK_DMG = 6;
 
 	/**
 	 * Class constructor.
 	 */
-	public CrystalShards() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.CRYSTAL, CardRarity.COMMON,
-				CardTarget.ALL_ENEMY);
+	public Revolver_Crystal() {
+		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
+				CardTarget.ENEMY);
 		damage = baseDamage = ATTACK_DMG;
-		isMultiDamage = true;
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class CrystalShards extends CustomCard {
 	 */
 	@Override
 	public AbstractCard makeCopy() {
-		return new Shield_Crystal();
+		return new Revolver_Crystal();
 	}
 
 	/**
@@ -87,11 +87,8 @@ public class CrystalShards extends CustomCard {
 	 */
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (energyOnUse < EnergyPanel.totalCount) {
-			energyOnUse = EnergyPanel.totalCount;
-		}
-
-		AbstractDungeon.actionManager
-				.addToBottom(new WhirlwindAction(p, multiDamage, damageTypeForTurn, freeToPlayOnce, energyOnUse));
+		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+				AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 	}
+
 }
