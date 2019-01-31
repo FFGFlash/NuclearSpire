@@ -37,7 +37,7 @@ public class Crystal_Needle_Rain extends CustomCard
     // Constructor
     public Crystal_Needle_Rain()
     {
-	super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
+	super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.CRYSTAL, CardRarity.RARE,
 		CardTarget.ENEMY);
 	damage = baseDamage = 0;
 	magicNumber = baseMagicNumber = DAMAGE_PER;

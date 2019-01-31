@@ -28,200 +28,210 @@ import basemod.animations.SpineAnimation;
  * @version 0.0.1
  *
  */
-public class Crystal extends CustomPlayer {
-	public static final int ENERGY_PER_TURN = 3;
-	public static final String SHOULDER_2 = "images/characters/crystal/shoulder2.png";
-	public static final String SHOULDER_1 = "images/characters/crystal/shoulder1.png";
-	public static final String CORPSE = "images/characters/crystal/corpse.png";
-	public static final String SKELETON_ATLAS = "images/characters/crystal/idle/skeleton.atlas";
-	public static final String SKELETON_JSON = "images/characters/crystal/idle/skeleton.json";
+public class Crystal extends CustomPlayer
+{
+    public static final int ENERGY_PER_TURN = 3;
+    public static final String SHOULDER_2 = "images/characters/crystal/shoulder2.png";
+    public static final String SHOULDER_1 = "images/characters/crystal/shoulder1.png";
+    public static final String CORPSE = "images/characters/crystal/corpse.png";
+    public static final String SKELETON_ATLAS = "images/characters/crystal/idle/skeleton.atlas";
+    public static final String SKELETON_JSON = "images/characters/crystal/idle/skeleton.json";
 
-	public static final String ID = "Crystal";
-	private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
-	public static final String[] NAMES = characterStrings.NAMES;
-	public static final String[] TEXT = characterStrings.TEXT;
-	private static final int STARTING_HP = 80;
-	private static final int STARTING_GOLD = 99;
-	private static final int MAX_ORBS = 0;
-	private static final int CARD_DRAW = 5;
+    public static final String ID = "Crystal";
+    private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
+    public static final String[] NAMES = characterStrings.NAMES;
+    public static final String[] TEXT = characterStrings.TEXT;
+    private static final int STARTING_HP = 80;
+    private static final int STARTING_GOLD = 99;
+    private static final int MAX_ORBS = 0;
+    private static final int CARD_DRAW = 5;
 
-	/**
-	 * 
-	 * Class constructor.
-	 * 
-	 * @param name
-	 *            The player's username.
-	 */
-	public Crystal(String name) {
-		super(name, PlayerClassEnum.CRYSTAL, null, null, new SpineAnimation(SKELETON_ATLAS, SKELETON_JSON, 1.0f));
+    /**
+     * 
+     * Class constructor.
+     * 
+     * @param name
+     *            The player's username.
+     */
+    public Crystal(String name)
+    {
+	super(name, PlayerClassEnum.CRYSTAL, null, null, new SpineAnimation(SKELETON_ATLAS, SKELETON_JSON, 1.0f));
 
-		initializeClass(null, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F,
-				new EnergyManager(ENERGY_PER_TURN));
-	}
+	initializeClass(null, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F,
+		new EnergyManager(ENERGY_PER_TURN));
+    }
 
-	/**
-	 * @return The character's starting deck.
-	 */
-	@Override
-	public ArrayList<String> getStartingDeck() {
-		ArrayList<String> retVal = new ArrayList<>();
+    /**
+     * @return The character's starting deck.
+     */
+    @Override
+    public ArrayList<String> getStartingDeck()
+    {
+	ArrayList<String> retVal = new ArrayList<>();
 
-		retVal.add("Revolver_Crystal");
-		retVal.add("Revolver_Crystal");
-		retVal.add("Revolver_Crystal");
-		retVal.add("Revolver_Crystal");
-		retVal.add("Revolver_Crystal");
+	// Basic cards
+	for (int i = 0; i < 5; i++)
+	{
+	    retVal.add("Revolver_Crystal");
+	    retVal.add("Shield_Crystal");
+	}
+	// Common cards
+	retVal.add("Crystal_Perfect_Timing");
 
-		// TODO: Add back when fixed
-		//retVal.add("Crystal_Shield");
+	return retVal;
+    }
 
-		retVal.add("Shield_Crystal");
-		retVal.add("Shield_Crystal");
-		retVal.add("Shield_Crystal");
-		retVal.add("Shield_Crystal");
-		
-		retVal.add("Crystal_Thronebutt");
-		retVal.add("Crystal_Needle_Rain");
-		retVal.add("Crystal_Perfect_Timing");
-		retVal.add("Crystal_Scarier_Face");
+    /**
+     * @return The charcter's starting relics.
+     */
+    @Override
+    public ArrayList<String> getStartingRelics()
+    {
+	ArrayList<String> retVal = new ArrayList<>();
+	return retVal;
+    }
 
-		return retVal;
-	}
+    /**
+     * @return The character's selection info.
+     */
+    @Override
+    public CharSelectInfo getLoadout()
+    {
+	return new CharSelectInfo(NAMES[0], TEXT[0], STARTING_HP, STARTING_HP, MAX_ORBS, STARTING_GOLD, CARD_DRAW, this,
+		getStartingRelics(), getStartingDeck(), false);
+    }
 
-	/**
-	 * @return The charcter's starting relics.
-	 */
-	@Override
-	public ArrayList<String> getStartingRelics() {
-		ArrayList<String> retVal = new ArrayList<>();
-		return retVal;
-	}
+    /**
+     * @return The character's title.
+     */
+    @Override
+    public String getTitle(PlayerClass paramPlayerClass)
+    {
+	return "Crystal";
+    }
 
-	/**
-	 * @return The character's selection info.
-	 */
-	@Override
-	public CharSelectInfo getLoadout() {
-		return new CharSelectInfo(NAMES[0], TEXT[0], STARTING_HP, STARTING_HP, MAX_ORBS, STARTING_GOLD, CARD_DRAW, this,
-				getStartingRelics(), getStartingDeck(), false);
-	}
+    /**
+     * @return The card color which this character uses.
+     */
+    @Override
+    public CardColor getCardColor()
+    {
+	return AbstractCardEnum.CRYSTAL;
+    }
 
-	/**
-	 * @return The character's title.
-	 */
-	@Override
-	public String getTitle(PlayerClass paramPlayerClass) {
-		return "Crystal";
-	}
+    /**
+     * @return The render color which this character uses.
+     */
+    @Override
+    public Color getCardRenderColor()
+    {
+	return Color.PURPLE;
+    }
 
-	/**
-	 * @return The card color which this character uses.
-	 */
-	@Override
-	public CardColor getCardColor() {
-		return AbstractCardEnum.CRYSTAL;
-	}
+    @Override
+    public AbstractCard getStartCardForEvent()
+    {
+	return null;
+    }
 
-	/**
-	 * @return The render color which this character uses.
-	 */
-	@Override
-	public Color getCardRenderColor() {
-		return Color.PURPLE;
-	}
+    /**
+     * @return The trail color which this character uses.
+     */
+    @Override
+    public Color getCardTrailColor()
+    {
+	return Color.PURPLE;
+    }
 
-	@Override
-	public AbstractCard getStartCardForEvent() {
-		return null;
-	}
+    /**
+     * @return The health loss for ascension run.
+     */
+    @Override
+    public int getAscensionMaxHPLoss()
+    {
+	return 13;
+    }
 
-	/**
-	 * @return The trail color which this character uses.
-	 */
-	@Override
-	public Color getCardTrailColor() {
-		return Color.PURPLE;
-	}
+    /**
+     * @return The font used for energy.
+     */
+    @Override
+    public BitmapFont getEnergyNumFont()
+    {
+	return FontHelper.energyNumFontRed;
+    }
 
-	/**
-	 * @return The health loss for ascension run.
-	 */
-	@Override
-	public int getAscensionMaxHPLoss() {
-		return 13;
-	}
+    /**
+     * Called when player selects the character
+     */
+    @Override
+    public void doCharSelectScreenSelectEffect()
+    {
+	CardCrawlGame.sound.playA("ATTACK_HEAVY", MathUtils.random(-0.2f, 0.2f));
+	CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
+    }
 
-	/**
-	 * @return The font used for energy.
-	 */
-	@Override
-	public BitmapFont getEnergyNumFont() {
-		return FontHelper.energyNumFontRed;
-	}
-	
-	/**
-	 * Called when player selects the character
-	 */
-	@Override
-	public void doCharSelectScreenSelectEffect() {
-		CardCrawlGame.sound.playA("ATTACK_HEAVY", MathUtils.random(-0.2f, 0.2f));
-		CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
-	}
-	
-	/**
-	 * Called when player selects the character for CustomMode
-	 */
-	@Override
-	public String getCustomModeCharacterButtonSoundKey() {
-		return "ATTACK_HEAVY";
-	}
-	
-	/**
-	 * @return The character's name.
-	 */
-	@Override
-	public String getLocalizedCharacterName() {
-		return "Crystal";
-	}
-	
-	/**
-	 * Creates a new instance of the character.
-	 */
-	@Override
-	public AbstractPlayer newInstance() {
-		return new Crystal(name);
-	}
-	
-	/**
-	 * @return The text to display when completing a run.
-	 */
-	@Override
-	public String getSpireHeartText() {
-		return null;
-	}
-	
-	/**
-	 * @return The slash color which this character uses.
-	 */
-	@Override
-	public Color getSlashAttackColor() {
-		return null;
-	}
-	
-	/**
-	 * @return The attack effect when reaching the heart.
-	 */
-	@Override
-	public AttackEffect[] getSpireHeartSlashEffect() {
-		return new AbstractGameAction.AttackEffect[0];
-	}
-	
-	/**
-	 * @return The text for the vampire event?
-	 */
-	@Override
-	public String getVampireText() {
-		return null;
-	}
+    /**
+     * Called when player selects the character for CustomMode
+     */
+    @Override
+    public String getCustomModeCharacterButtonSoundKey()
+    {
+	return "ATTACK_HEAVY";
+    }
+
+    /**
+     * @return The character's name.
+     */
+    @Override
+    public String getLocalizedCharacterName()
+    {
+	return "Crystal";
+    }
+
+    /**
+     * Creates a new instance of the character.
+     */
+    @Override
+    public AbstractPlayer newInstance()
+    {
+	return new Crystal(name);
+    }
+
+    /**
+     * @return The text to display when completing a run.
+     */
+    @Override
+    public String getSpireHeartText()
+    {
+	return null;
+    }
+
+    /**
+     * @return The slash color which this character uses.
+     */
+    @Override
+    public Color getSlashAttackColor()
+    {
+	return null;
+    }
+
+    /**
+     * @return The attack effect when reaching the heart.
+     */
+    @Override
+    public AttackEffect[] getSpireHeartSlashEffect()
+    {
+	return new AbstractGameAction.AttackEffect[0];
+    }
+
+    /**
+     * @return The text for the vampire event?
+     */
+    @Override
+    public String getVampireText()
+    {
+	return null;
+    }
 
 }

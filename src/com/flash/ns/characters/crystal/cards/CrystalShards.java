@@ -57,7 +57,7 @@ public class CrystalShards extends CustomCard {
 	 * Class constructor.
 	 */
 	public CrystalShards() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.CRYSTAL, CardRarity.COMMON,
+		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.CRYSTAL, CardRarity.UNCOMMON,
 				CardTarget.ALL_ENEMY);
 		damage = baseDamage = ATTACK_DMG;
 		isMultiDamage = true;

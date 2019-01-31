@@ -26,6 +26,7 @@ Cursed form (3/2 energy)
 POWER
 - Innate. Gain 1 dexterity every time a power card is played.
 
+[ COMPLETED ]
 Hammerhead (1 energy)
 SKILL
 - Gain 7/10 block.

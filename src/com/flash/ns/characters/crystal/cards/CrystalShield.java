@@ -51,7 +51,7 @@ public class CrystalShield extends CustomCard {
 	 * Class constructor.
 	 */
 	public CrystalShield() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
+		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.CRYSTAL, CardRarity.RARE,
 				CardTarget.ALL_ENEMY);
 	}
 

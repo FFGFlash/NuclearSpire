@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.flash.ns.characters.Crystal;
 import com.flash.ns.characters.crystal.cards.CrystalShards;
 import com.flash.ns.characters.crystal.cards.CrystalShield;
+import com.flash.ns.characters.crystal.cards.Crystal_Hammerhead;
 import com.flash.ns.characters.crystal.cards.Crystal_Needle_Rain;
 import com.flash.ns.characters.crystal.cards.Crystal_Perfect_Timing;
 import com.flash.ns.characters.crystal.cards.Crystal_Scarier_Face;
@@ -76,14 +77,19 @@ public class CrystalMod implements CharacterMod
     @Override
     public void receiveEditCards()
     {
+	// Basic
 	BaseMod.addCard(new Revolver_Crystal());
-	BaseMod.addCard(new CrystalShield());
 	BaseMod.addCard(new Shield_Crystal());
+	// Common
+	BaseMod.addCard(new Crystal_Hammerhead());
+	BaseMod.addCard(new Crystal_Perfect_Timing());
+	// Uncommon
 	BaseMod.addCard(new CrystalShards());
 	BaseMod.addCard(new Crystal_Thronebutt());
-	BaseMod.addCard(new Crystal_Needle_Rain());
-	BaseMod.addCard(new Crystal_Perfect_Timing());
+	// Rare
+	BaseMod.addCard(new CrystalShield());
 	BaseMod.addCard(new Crystal_Scarier_Face());
+	BaseMod.addCard(new Crystal_Needle_Rain());
     }
 
     @Override

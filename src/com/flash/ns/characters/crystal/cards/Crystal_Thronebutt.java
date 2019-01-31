@@ -35,7 +35,7 @@ public class Crystal_Thronebutt extends CustomCard {
 	// Constructor
 	public Crystal_Thronebutt()
 	{
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
+		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.CRYSTAL, CardRarity.UNCOMMON,
 				CardTarget.SELF);
 		magicNumber = baseMagicNumber = STRENGTH;
 	}

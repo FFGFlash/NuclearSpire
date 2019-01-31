@@ -30,5 +30,9 @@
   "Crystal_Scarier_Face": {
     "NAME": "Scarier Face",
     "DESCRIPTION": "ALL enemies lost 20% max health. NL Exhaust."
+  },
+  "Crystal_Hammerhead": {
+    "NAME": "Hammerhead",
+    "DESCRIPTION": "Gain !B! block."
   }
 }

@@ -32,7 +32,7 @@ public class Crystal_Scarier_Face extends CustomCard
     // Constructor
     public Crystal_Scarier_Face()
     {
-	super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
+	super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.CRYSTAL, CardRarity.RARE,
 		CardTarget.ALL_ENEMY);
 	exhaust = true;
     }
