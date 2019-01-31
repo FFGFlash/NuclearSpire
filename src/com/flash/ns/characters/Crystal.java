@@ -80,6 +80,7 @@ public class Crystal extends CustomPlayer {
 		retVal.add("Shield_Crystal");
 		
 		retVal.add("Crystal_Thronebutt");
+		retVal.add("Crystal_Needle_Rain");
 
 		return retVal;
 	}

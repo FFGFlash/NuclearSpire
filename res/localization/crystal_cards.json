@@ -18,5 +18,9 @@
   "Crystal_Thronebutt": {
     "NAME": "Thronebutt",
     "DESCRIPTION": "Gain !M! strength and lose 1 dexterity."
+  },
+  "Crystal_Needle_Rain": {
+    "NAME": "Needle Rain",
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL your cards containing \"Shard\"."
   }
 }

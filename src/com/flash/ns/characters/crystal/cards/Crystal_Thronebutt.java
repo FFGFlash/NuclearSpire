@@ -1,6 +1,10 @@
 
 package com.flash.ns.characters.crystal.cards;
 
+/*
+ * @author Knilax
+ * @version 0.0.1
+ */
 import com.flash.ns.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +17,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import basemod.abstracts.CustomCard;
 
-public class CrystalThronebutt extends CustomCard {
+public class Crystal_Thronebutt extends CustomCard {
 
 	public static final String ID = "Crystal_Thronebutt";
 
@@ -28,27 +32,36 @@ public class CrystalThronebutt extends CustomCard {
 	public static final int STRENGTH = 3;
 	public static final int DEXTERITY = -1;
 	
-	public CrystalThronebutt() {
+	// Constructor
+	public Crystal_Thronebutt()
+	{
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
 				CardTarget.SELF);
 		magicNumber = baseMagicNumber = STRENGTH;
 	}
-
+	
+	// On make copy of card
 	@Override
-	public AbstractCard makeCopy() {
-		return new CrystalThronebutt();
+	public AbstractCard makeCopy()
+	{
+		return new Crystal_Thronebutt();
 	}
-
+	
+	// On upgrade
 	@Override
-	public void upgrade() {
-		if (!upgraded) {
+	public void upgrade()
+	{
+		if (!upgraded)
+		{
 			upgradeName();
 			upgradeMagicNumber(1);
 		}
 	}
-
+	
+	// On card use
 	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
+	public void use(AbstractPlayer p, AbstractMonster m)
+	{
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(p, p, new DexterityPower(p, DEXTERITY), DEXTERITY));
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
 	}
