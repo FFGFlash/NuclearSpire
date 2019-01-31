@@ -10,11 +10,12 @@ Impact Wrists (2 energy)
 POWER
 - On enemy death, hurt all other enemies for 10/14 damage.
 
-Scarier face (3/2 energy)
+[ COMPLETED ]
+Scarier face (2 energy)
 SKILL
-- All enemies lose 20% HP. Exhaust.
+- ()/(Innate.) All enemies lose 20% HP. Exhaust.
 
-Fortress (3/2 energy)
+Fortress (4/3 energy)
 POWER
 - Gain 1 dexterity every turn.
 
@@ -22,9 +23,9 @@ Juggernaut (2 energy)
 POWER
 - Gain 2/3 block whenever a skill is played.
 
-Cursed form (3/2 energy)
+Cursed form (2 energy)
 POWER
-- Innate. Gain 1 dexterity every time a power card is played.
+- ()/(Innate.) Gain 1 dexterity every time a power card is played.
 
 [ COMPLETED ]
 Hammerhead (1 energy)
