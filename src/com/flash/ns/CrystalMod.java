@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.BaseMod;
@@ -114,6 +115,11 @@ public class CrystalMod implements CharacterMod {
 	@Override
 	public void receivePostDraw(AbstractCard c) {
 
+	}
+
+	@Override
+	public boolean receivePreMonsterTurn(AbstractMonster m) {
+		return false;
 	}
 
 }
