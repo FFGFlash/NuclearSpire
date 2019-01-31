@@ -38,6 +38,7 @@ Racing mind (1/0 energy)
 SKILL
 - Gain a Revolver card for this combat. It costs 0 energy.
 
+[ COMPLETED ]
 Perfect timing (1/0 energy)
 SKILL
 - Block doesn't decay after this turn.
