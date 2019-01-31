@@ -26,5 +26,9 @@
   "Crystal_Perfect_Timing": {
     "NAME": "Perfect Timing",
     "DESCRIPTION": "Block is not removed at the start of your next turn."
+  },
+  "Crystal_Scarier_Face": {
+    "NAME": "Scarier Face",
+    "DESCRIPTION": "ALL enemies lost 20% max health. NL Exhaust."
   }
 }

@@ -12,6 +12,7 @@ import com.flash.ns.characters.crystal.cards.CrystalShards;
 import com.flash.ns.characters.crystal.cards.CrystalShield;
 import com.flash.ns.characters.crystal.cards.Crystal_Needle_Rain;
 import com.flash.ns.characters.crystal.cards.Crystal_Perfect_Timing;
+import com.flash.ns.characters.crystal.cards.Crystal_Scarier_Face;
 import com.flash.ns.characters.crystal.cards.Crystal_Thronebutt;
 import com.flash.ns.characters.crystal.cards.Revolver_Crystal;
 import com.flash.ns.characters.crystal.cards.Shield_Crystal;
@@ -82,6 +83,7 @@ public class CrystalMod implements CharacterMod
 	BaseMod.addCard(new Crystal_Thronebutt());
 	BaseMod.addCard(new Crystal_Needle_Rain());
 	BaseMod.addCard(new Crystal_Perfect_Timing());
+	BaseMod.addCard(new Crystal_Scarier_Face());
     }
 
     @Override

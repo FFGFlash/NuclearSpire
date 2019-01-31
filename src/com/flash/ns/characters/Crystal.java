@@ -83,6 +83,7 @@ public class Crystal extends CustomPlayer {
 		retVal.add("Crystal_Thronebutt");
 		retVal.add("Crystal_Needle_Rain");
 		retVal.add("Crystal_Perfect_Timing");
+		retVal.add("Crystal_Scarier_Face");
 
 		return retVal;
 	}
