@@ -21,6 +21,10 @@
   },
   "Crystal_Needle_Rain": {
     "NAME": "Needle Rain",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL your cards containing \"Shard\"."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! damage for ALL your cards containing \"Shard\"."
+  },
+  "Crystal_Perfect_Timing": {
+    "NAME": "Perfect Timing",
+    "DESCRIPTION": "Block is not removed at the start of your next turn."
   }
 }

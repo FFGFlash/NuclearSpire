@@ -72,7 +72,8 @@ public class Crystal extends CustomPlayer {
 		retVal.add("Revolver_Crystal");
 		retVal.add("Revolver_Crystal");
 
-		retVal.add("Crystal_Shield");
+		// TODO: Add back when fixed
+		//retVal.add("Crystal_Shield");
 
 		retVal.add("Shield_Crystal");
 		retVal.add("Shield_Crystal");
@@ -81,6 +82,7 @@ public class Crystal extends CustomPlayer {
 		
 		retVal.add("Crystal_Thronebutt");
 		retVal.add("Crystal_Needle_Rain");
+		retVal.add("Crystal_Perfect_Timing");
 
 		return retVal;
 	}

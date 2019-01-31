@@ -10,8 +10,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.flash.ns.characters.Crystal;
 import com.flash.ns.characters.crystal.cards.CrystalShards;
 import com.flash.ns.characters.crystal.cards.CrystalShield;
-import com.flash.ns.characters.crystal.cards.Crystal_Thronebutt;
 import com.flash.ns.characters.crystal.cards.Crystal_Needle_Rain;
+import com.flash.ns.characters.crystal.cards.Crystal_Perfect_Timing;
+import com.flash.ns.characters.crystal.cards.Crystal_Thronebutt;
 import com.flash.ns.characters.crystal.cards.Revolver_Crystal;
 import com.flash.ns.characters.crystal.cards.Shield_Crystal;
 import com.flash.ns.patches.AbstractCardEnum;
@@ -80,6 +81,7 @@ public class CrystalMod implements CharacterMod
 	BaseMod.addCard(new CrystalShards());
 	BaseMod.addCard(new Crystal_Thronebutt());
 	BaseMod.addCard(new Crystal_Needle_Rain());
+	BaseMod.addCard(new Crystal_Perfect_Timing());
     }
 
     @Override
@@ -131,10 +133,13 @@ public class CrystalMod implements CharacterMod
     @Override
     public void receivePostDraw(AbstractCard c)
     {
-
-	// Update CrystalThrowShard
-	if (c instanceof Crystal_Needle_Rain)
-	    c.damage = (c.baseDamage + c.magicNumber) * Crystal_Needle_Rain.countShards();
+	// Update CrystalThrowShard damage
+	/*
+	 * NOTE "if(c instanceof Crystal_Needle_Rain)" did NOT work.
+	 */
+	if (c.cardID.equals("Crystal_Needle_Rain")) // TODO: Fix damage to be green on card; change damage not
+						    // baseDamage somehow
+	    c.baseDamage = c.baseMagicNumber * Crystal_Needle_Rain.countShards();
     }
 
     @Override

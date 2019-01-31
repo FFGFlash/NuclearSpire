@@ -7,7 +7,10 @@ package com.flash.ns.characters.crystal.cards;
  */
 import com.flash.ns.patches.AbstractCardEnum;
 import com.flash.ns.patches.CardTagsEnum;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -35,10 +38,9 @@ public class Crystal_Needle_Rain extends CustomCard
     public Crystal_Needle_Rain()
     {
 	super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
-		CardTarget.SELF);
-	this.baseDamage = 0;
-	this.magicNumber = DAMAGE_PER;
-	tags.add(CardTagsEnum.SHARD);
+		CardTarget.ENEMY);
+	damage = baseDamage = 0;
+	magicNumber = baseMagicNumber = DAMAGE_PER;
     }
 
     // Count number of shard cards
@@ -79,9 +81,8 @@ public class Crystal_Needle_Rain extends CustomCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-	AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
-		new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn),
-		com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+	AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+		AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
 }
