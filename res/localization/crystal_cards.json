@@ -14,5 +14,9 @@
   "Crystal_Shards": {
     "NAME": "Crystal Shards",
     "DESCRIPTION": "Deal !D! damage X times."
+  },
+  "Crystal_Thronebutt": {
+    "NAME": "Thronebutt",
+    "DESCRIPTION": "Gain !M! strength and lose 1 dexterity."
   }
 }

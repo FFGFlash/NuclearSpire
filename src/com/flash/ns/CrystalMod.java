@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.flash.ns.characters.Crystal;
 import com.flash.ns.characters.crystal.cards.CrystalShards;
 import com.flash.ns.characters.crystal.cards.CrystalShield;
+import com.flash.ns.characters.crystal.cards.CrystalThronebutt;
 import com.flash.ns.characters.crystal.cards.Revolver_Crystal;
 import com.flash.ns.characters.crystal.cards.Shield_Crystal;
 import com.flash.ns.patches.AbstractCardEnum;
@@ -71,6 +72,7 @@ public class CrystalMod implements CharacterMod {
 		BaseMod.addCard(new CrystalShield());
 		BaseMod.addCard(new Shield_Crystal());
 		BaseMod.addCard(new CrystalShards());
+		BaseMod.addCard(new CrystalThronebutt());
 	}
 
 	@Override

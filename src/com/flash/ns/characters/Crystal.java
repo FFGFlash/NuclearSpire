@@ -78,6 +78,8 @@ public class Crystal extends CustomPlayer {
 		retVal.add("Shield_Crystal");
 		retVal.add("Shield_Crystal");
 		retVal.add("Shield_Crystal");
+		
+		retVal.add("Crystal_Thronebutt");
 
 		return retVal;
 	}
