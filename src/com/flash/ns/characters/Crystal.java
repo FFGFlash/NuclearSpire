@@ -23,7 +23,7 @@ import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
 
 /**
- * 
+ *
  * @author Flash
  * @version 0.0.1
  *
@@ -47,9 +47,9 @@ public class Crystal extends CustomPlayer
     private static final int CARD_DRAW = 5;
 
     /**
-     * 
+     *
      * Class constructor.
-     * 
+     *
      * @param name
      *            The player's username.
      */

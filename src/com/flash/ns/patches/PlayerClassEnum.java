@@ -11,7 +11,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
  * @version 0.0.1
  *
  */
-public class PlayerClassEnum {
-	@SpireEnum
-	public static PlayerClass CRYSTAL;
+public class PlayerClassEnum
+{
+    @SpireEnum
+    public static PlayerClass CRYSTAL;
 }
