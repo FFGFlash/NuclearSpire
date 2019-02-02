@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -51,6 +52,7 @@ public class CrystalMod implements CharacterMod
 
     private static final String CARD_STRINGS = "localization/crystal_cards.json";
     private static final String RELIC_STRINGS = "localization/crystal_relics.json";
+    private static final String POWER_STRINGS = "localization/crystal_powers.json";
 
     public CrystalMod()
     {
@@ -100,6 +102,9 @@ public class CrystalMod implements CharacterMod
 
 	String cardStrings = Gdx.files.internal(CARD_STRINGS).readString(String.valueOf(StandardCharsets.UTF_8));
 	BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
+
+	String powerStrings = Gdx.files.internal(POWER_STRINGS).readString(String.valueOf(StandardCharsets.UTF_8));
+	BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
     }
 
     @Override

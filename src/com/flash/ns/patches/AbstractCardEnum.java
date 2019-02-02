@@ -11,7 +11,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
  * @version 0.0.1
  *
  */
-public class AbstractCardEnum {
-	@SpireEnum
-	public static CardColor CRYSTAL;
+public class AbstractCardEnum
+{
+    @SpireEnum
+    public static CardColor CRYSTAL;
 }
