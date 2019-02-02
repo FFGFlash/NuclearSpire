@@ -1,0 +1,6 @@
+{
+  "Reflect": {
+    "NAME": "Reflection",
+    "DESCRIPTION": ["Reflect half of incoming damage for", "turns."]
+  }
+}
