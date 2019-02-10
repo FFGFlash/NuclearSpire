@@ -3,6 +3,7 @@ package com.flash.ns.characters.crystal.cards;
 
 /*
  * @author Knilax
+ * @author Flash
  * @version 0.0.1
  */
 import com.flash.ns.patches.AbstractCardEnum;
@@ -36,6 +37,7 @@ public class Crystal_Hammerhead extends CustomCard
     {
 	super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.CRYSTAL, CardRarity.COMMON,
 		CardTarget.ALL_ENEMY);
+	block = baseBlock = BLOCK;
     }
 
     // On make copy of card

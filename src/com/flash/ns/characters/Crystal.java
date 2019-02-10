@@ -77,6 +77,7 @@ public class Crystal extends CustomPlayer
 	}
 	// Common cards
 	retVal.add("Crystal_Perfect_Timing");
+	retVal.add("Crystal_Needle_Rain");
 
 	return retVal;
     }

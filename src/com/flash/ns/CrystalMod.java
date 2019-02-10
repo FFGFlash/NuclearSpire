@@ -30,6 +30,13 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.BaseMod;
 
+/**
+ * 
+ * @author Flash
+ * @author Knilax
+ * @version 0.0.1
+ *
+ */
 public class CrystalMod implements CharacterMod
 {
     public static final Logger logger = LogManager.getLogger(NuclearSpireMod.class.getName());
@@ -146,13 +153,7 @@ public class CrystalMod implements CharacterMod
     @Override
     public void receivePostDraw(AbstractCard c)
     {
-	// Update CrystalThrowShard damage
-	/*
-	 * NOTE "if(c instanceof Crystal_Needle_Rain)" did NOT work.
-	 */
-	if (c.cardID.equals("Crystal_Needle_Rain")) // TODO: Fix damage to be green on card; change damage not
-						    // baseDamage somehow
-	    c.baseDamage = c.baseMagicNumber * Crystal_Needle_Rain.countShards();
+	
     }
 
     @Override

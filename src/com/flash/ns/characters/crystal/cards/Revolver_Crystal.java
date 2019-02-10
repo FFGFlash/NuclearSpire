@@ -1,6 +1,7 @@
 package com.flash.ns.characters.crystal.cards;
 
 import com.flash.ns.patches.AbstractCardEnum;
+import com.flash.ns.patches.CardTagsEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -63,6 +64,7 @@ public class Revolver_Crystal extends CustomCard
 	super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.CRYSTAL, CardRarity.BASIC,
 		CardTarget.ENEMY);
 	damage = baseDamage = ATTACK_DMG;
+	tags.add(CardTagsEnum.SHARD);
     }
 
     /**

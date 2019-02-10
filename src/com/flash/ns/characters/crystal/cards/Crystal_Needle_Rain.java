@@ -3,6 +3,7 @@ package com.flash.ns.characters.crystal.cards;
 
 /*
  * @author Knilax
+ * @author Flash
  * @version 0.0.1
  */
 import com.flash.ns.patches.AbstractCardEnum;
@@ -75,6 +76,13 @@ public class Crystal_Needle_Rain extends CustomCard
 	    upgradeName();
 	    upgradeMagicNumber(UPGRADE_BONUS);
 	}
+    }
+    
+    @Override
+    public void applyPowers()
+    {
+        super.applyPowers();
+        damage += baseMagicNumber * Crystal_Needle_Rain.countShards();
     }
 
     // On card use
